@@ -2,8 +2,7 @@ const request=require('request');
 var geocodeAddress=(address) =>{
     return new Promise((resolve,reject) =>{
   var encodedAddress=encodeURIComponent(address);
-  // AIzaSyBlcEq1mNAWJTBJLplNb4J3Dsa8Jj3vbbU
-  var apikey='AIzaSyB541HKc21JZEe9jBOdKg0KiB0oxNYfV3k';
+  var apikey=env.apiKey;
   var url=`https://maps.googleapis.com/maps/api/geocode/json?address=`+encodedAddress
   request({
     url:url,
