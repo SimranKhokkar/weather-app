@@ -3,7 +3,7 @@ var request = require('request');
 
 
 function getLocation(place,callback){
-let apikey='AIzaSyB0rIjTTGOjSi0-_nXv7X4oVqmA3YJYPng';
+let apikey=env.apiKey;
 let url= 'https://maps.googleapis.com/maps/api/geocode/json?address='+place+'&key='+apikey;
 request(url, function (error, response, body) {
     var body = JSON.parse(body);
