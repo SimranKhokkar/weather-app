@@ -18,7 +18,7 @@ request(url, function (error, response, body) {
 }
 
 function getWeather(lat,lng,callback){
-  let  apikey='10eef8e5c2f52e66830550bbeba92dbb';
+  let  apikey=env.weatherApiKey;
   url= 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lng+'&appid='+apikey;
   request(url, function (error, response, body) {
     var body = JSON.parse(body);
